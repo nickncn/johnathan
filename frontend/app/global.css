@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background: 255 255 255;
+    --foreground: 0 0 0;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: 0 0 0;
+        --foreground: 255 255 255;
+    }
+}
+
+body {
+    color: rgb(var(--foreground));
+    background: rgb(var(--background));
+}
+
+/* Custom styles for charts and components */
+.chart-container {
+    @apply w-full h-64 p-4;
+}
+
+.kpi-card {
+    @apply bg-white rounded-lg shadow p-6 border border-gray-200;
+}
+
+.alert-success {
+    @apply bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded;
+}
+
+.alert-danger {
+    @apply bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded;
+}
+
+.alert-warning {
+    @apply bg-yellow-50 border border-yellow-200 text-yellow-800 px-4 py-3 rounded;
+}
